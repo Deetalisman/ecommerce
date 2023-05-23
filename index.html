@@ -30,7 +30,8 @@
                 </ul>
             </div>
             <div class="header-right">
-                <img src="img/image-avatar.png" alt="">
+                <img src="img/cart2.png" id="cart1">
+                <img src="img/image-avatar.png" id="img1">
             </div>
         </header>
         <main>
@@ -62,12 +63,12 @@
                 </div>
                 <div class="feet">
                     <div class="feet-left">
-                        <p class="sign">-</p>
-                        <p>0</p>
-                        <p class="sign">+</p>
+                        <p class="sign" id="remove" onclick="decrease()">-</p>
+                        <p class="out">0</p>
+                        <p class="sign" id="add" onclick="increase()">+</p>
                     </div>
                     <div class="feet-right">
-                       <p>Add to cart</p>
+                        <p>Add to cart</p>
                     </div>
                 </div>
             </div>
