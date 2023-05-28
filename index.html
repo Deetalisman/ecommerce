@@ -33,21 +33,29 @@
                 <img src="img/cart2.png" id="cart1">
                 <img src="img/image-avatar.png" id="img1">
             </div>
+            <div class="cart">
+                <p class="pcart">Cart</p>
+                <p class="tpcart">Your cart is empty</p>
+                <div class="add-shoe">
+                    <div class="add-shoe1">
+                        <img src="img/image-product-1-thumbnail.jpg" alt="">
+                        <p>Fall Limited Edition Sneakers <br>$125.00 x 3 <span>$375.00</span></p>
+                        <i class="fa-solid fa-trash-can" style="color: #adadae;" id="del"></i>
+                    </div>
+                    <button>Checkout</button>
+                </div>
+            </div>
         </header>
         <main>
             <div class="main-left">
                 <div class="one-img">
                     <img src="img/image-product-1.jpg" alt="">
-                    <div class="cart">
-                        <p class="pcart">Cart</p>
-                        <p class="tpcart">Your cart is empty</p>
-                    </div>
                 </div>
                 <div class="multiple">
-                    <img src="img/image-product-1-thumbnail.jpg" id="current">
-                    <img src="img/image-product-2-thumbnail.jpg" alt="">
-                    <img src="img/image-product-3-thumbnail.jpg" alt="">
-                    <img src="img/image-product-4-thumbnail.jpg" alt="">
+                    <img src="img/image-product-1-thumbnail.jpg" id="current" onclick="openModal();currentSlide(1)">
+                    <img src="img/image-product-2-thumbnail.jpg" alt="" onclick="openModal();currentSlide(2)">
+                    <img src="img/image-product-3-thumbnail.jpg" alt="" onclick="openModal();currentSlide(3)">
+                    <img src="img/image-product-4-thumbnail.jpg" alt="" onclick="openModal();currentSlide(4)">
                 </div>
             </div>
             <div class="main-right">
@@ -68,12 +76,56 @@
                         <p class="sign" id="add" onclick="increase()">+</p>
                     </div>
                     <div class="feet-right">
-                        <p>Add to cart</p>
+                        <p id="addCart">Add to cart</p>
                     </div>
                 </div>
             </div>
         </main>
     </section>
+    <div id="myModal" class="modal">
+        <span class="close cursor" onclick="closeModal()">&times;</span>
+        <div class="modal-content">
+        <div class="slide">
+          <div class="mySlides">
+            <div class="numbertext">1 / 4</div>
+            <img src="img/image-product-1.jpg" style="width:100%">
+          </div>
+      
+          <div class="mySlides">
+            <div class="numbertext">2 / 4</div>
+            <img src="img/image-product-2.jpg" style="width:100%">
+          </div>
+      
+          <div class="mySlides">
+            <div class="numbertext">3 / 4</div>
+            <img src="img/image-product-3.jpg" style="width:100%">
+          </div>
+          
+          <div class="mySlides">
+            <div class="numbertext">4 / 4</div>
+            <img src="img/image-product-4.jpg" style="width:100%">
+          </div>
+          
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+            <div class="cols">
+                <div class="column">
+                    <img class="demo cursor" src="img/image-product-1-thumbnail.jpg" style="width:100%" onclick="currentSlide(1)" alt="Nature and sunrise">
+                </div>
+                <div class="column">
+                    <img class="demo cursor" src="img/image-product-2-thumbnail.jpg" style="width:100%" onclick="currentSlide(2)" alt="Snow">
+                </div>
+                <div class="column">
+                    <img class="demo cursor" src="img/image-product-3-thumbnail.jpg" style="width:100%" onclick="currentSlide(3)" alt="Mountains and fjords">
+                </div>
+                <div class="column">
+                    <img class="demo cursor" src="img/image-product-4-thumbnail.jpg" style="width:100%" onclick="currentSlide(4)" alt="Northern Lights">
+                </div>
+            </div>
+        </div>
+      </div>
+      
     <script src="./index.js"></script>
 </body>
 </html>
